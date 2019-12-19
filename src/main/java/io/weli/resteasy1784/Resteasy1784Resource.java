@@ -8,13 +8,14 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 
-@Path("/")
+@Path("/1784")
 public class Resteasy1784Resource {
     @Path("ErrorAfterFlushWithoutBody")
     @GET
     @Produces(MediaType.APPLICATION_OCTET_STREAM)
     public void errorAfterFlushWithoutBody(@Context HttpServletResponse response) throws IOException {
         response.getOutputStream().flush();
-        throw new IOException("a strange io error");
+        throw new IOException("a " +
+                "strange io error");
     }
 }

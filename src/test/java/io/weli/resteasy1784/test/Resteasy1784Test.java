@@ -12,6 +12,11 @@ public class Resteasy1784Test {
 //        Assert.assertTrue(data.contains("Transfer-Encoding: chunked"));
 //        // there must be no end-chunk
 //        Assert.assertFalse(data.endsWith("0"));
+
+        // 按照`ChunkedTransferEncodingUnitTest`的重写：
+        // https://github.com/resteasy/Resteasy/blob/master/testsuite/unit-tests/src/test/java/org/jboss/resteasy/test/client/ChunkedTransferEncodingUnitTest.java
+
+
     }
 
 }
