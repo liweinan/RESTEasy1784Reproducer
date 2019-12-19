@@ -18,4 +18,11 @@ public class Resteasy1784Resource {
         throw new IOException("a " +
                 "strange io error");
     }
+
+
+    @Path("NormalError")
+    @GET
+    public String normalError() throws IOException {
+        throw new IOException();
+    }
 }

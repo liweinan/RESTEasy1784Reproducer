@@ -42,5 +42,3 @@ Transfer-Encoding: chunked
 $
 ```
 
-
-
