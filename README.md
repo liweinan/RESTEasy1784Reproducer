@@ -4,6 +4,12 @@
 $ mvn jetty:run
 ```
 
+如果需要调试，在执行上面的命令之前，添加下面的选项：
+
+```bash
+$ export MAVEN_OPTS='-Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005'
+```
+
 测试请求：
 
 ```bash
