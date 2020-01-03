@@ -48,3 +48,11 @@ Transfer-Encoding: chunked
 $
 ```
 
+## Normal Test
+
+另一个test case可以看到异常被正确抛出：
+
+```bash
+$ http -v localhost:8080/1784/NormalError
+```
+
