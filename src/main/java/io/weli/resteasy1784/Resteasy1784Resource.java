@@ -17,8 +17,8 @@ public class Resteasy1784Resource {
     @GET
     @Produces(MediaType.APPLICATION_OCTET_STREAM)
     public void errorAfterFlushWithoutBody(@Context HttpResponse response) throws IOException {
-        response.setAbortWithException(true);
-        System.out.println("*** " + response.getClass() + " *** " + response.abortWithException());
+        response.setSuppressExceptionDuringChunkedTransfer(true);
+        System.out.println("*** " + response.getClass() + " *** " + response.suppressExceptionDuringChunkedTransfer());
         response.getOutputStream().flush();
         throw new IOException("a " +
                 "strange io error");
